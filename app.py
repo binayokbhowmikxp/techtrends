@@ -5,7 +5,7 @@ from werkzeug.exceptions import abort
 import logging
 
 
-#Total Number of DB connection
+#Total Number of DB connections
 TOT_DB_CONNECTION = 0
 
 
