@@ -106,7 +106,5 @@ def create():
 if __name__ == "__main__":
    standard_out = logging.StreamHandler(sys.stdout)
    standard_error = logging.StreamHandler(sys.stderr)
-   logger.addHandler(standard_out)
-   logger.addHandler(standard_error) 
-   logging.basicConfig(level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s : %(message)s')
-   app.run(host='0.0.0.0', port='3111',handlers=handlers)
+   handlers = [standard_error, standard_out]
+   logging.basicConfig(level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s : %(message)s',handlers=handlers)
