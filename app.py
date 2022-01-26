@@ -108,3 +108,4 @@ if __name__ == "__main__":
    standard_error = logging.StreamHandler(sys.stderr)
    handlers = [standard_error, standard_out]
    logging.basicConfig(level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s : %(message)s',handlers=handlers)
+   app.run(host='0.0.0.0', port='3111')
